@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Example</title>
+    <style>
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .header {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px;
+      }
+
+      .roll-no {
+        font-size: 18px;
+        margin: 10px;
+      }
+
+      .paragraph {
+        margin: 20px;
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="header">Abhishek Gupta</div>
+      <div class="roll-no">Roll No: 15</div>
+      <div class="paragraph">
+        <p>
+          1:-  1700 hertz
+        </p>
+        <p>
+         3. 20N
+        </p>
+        <p>
+            4. 0.25
+        </p>
+        <p>
+            5. 30km/h
+        </p>
+         <p>7:- 
+            Hello, my name is Abhishek and I am a data science student. I have always been interested in the field of data analysis and data-driven decision-making. Currently, I am pursuing my studies in data science and I have gained a solid foundation in programming languages such as Python, R and SQL, as well as machine learning techniques and data visualization tools. I have also gained experience working on various data science projects, which has helped me to develop strong analytical and problem-solving skills. Overall, I am passionate about the field of data science and I am excited about the opportunities it provides to use data to make informed decisions and drive business success
+         </p>
+         <p>
+            inputNum = int(input())
+
+            # Create a list of lottery IDs from 1 to N
+            lottery_ids = list(i for i in range(1, inputNum + 1))
+            
+            # Define a function to perform one step of the lottery process
+            def perform_step(ids):
+                # Remove the first ID
+                ids.pop(0)
+                # Remove every alternate ID
+                ids = ids[::2]
+                return ids
+            
+            # Perform the steps of the lottery process until only one ID remains
+            while len(lottery_ids) > 1:
+                # Perform the left-to-right step
+                lottery_ids = perform_step(lottery_ids)
+                
+                # Check if there is only one ID remaining after the left-to-right step
+                if len(lottery_ids) == 1:
+                    break
+                
+                # Perform the right-to-left step
+                lottery_ids = lottery_ids[::-1]
+                lottery_ids = perform_step(lottery_ids)
+                lottery_ids = lottery_ids[::-1]
+            
+            # The remaining ID is the winner
+            print(lottery_ids[0]) 
+        </p>
+        <p>9.
+            # Define the capacities of the two jugs
+            jug1_capacity = 5
+            jug2_capacity = 3
+
+            # Define the goal amount of water to be measured in jug1
+            goal_amount = 4
+
+            # Initialize the amounts of water in each jug to zero
+            jug1_amount = 0
+            jug2_amount = 0
+
+            # Loop until the goal amount of water is reached in jug1
+            while jug1_amount != goal_amount:
+                # Fill jug1
+                jug1_amount = jug1_capacity
+
+                # Pour water from jug1 into jug2 until either jug2 is full or jug1 is empty
+                jug2_amount += min(jug1_amount, jug2_capacity - jug2_amount)
+                jug1_amount -= min(jug1_amount, jug2_capacity - jug2_amount)
+
+                # Empty jug2 if it is full
+                if jug2_amount == jug2_capacity:
+                    jug2_amount = 0
+
+                # Print the current amounts of water in each jug
+                print("Jug 1: " + str(jug1_amount) + " units")
+                print("Jug 2: " + str(jug2_amount) + " units")
+
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
